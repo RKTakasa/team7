@@ -1,13 +1,16 @@
 #Greenfoot project file
 class.A.image=castle.png
 class.MyWorld.image=back_flop.jpeg
-class.towaaaaaaaaa.image=tux.png
+class.towaaaaaaaaa.image=\u6226\u3046\u767D\u8840\u7403\u3055\u3093-1024x1024.png
+dependency1.from=MyWorld
+dependency1.to=towaaaaaaaaa
+dependency1.type=UsesDependency
 editor.fx.0.height=739
 editor.fx.0.width=816
 editor.fx.0.x=140
 editor.fx.0.y=134
 height=635
-package.numDependencies=0
+package.numDependencies=1
 package.numTargets=3
 project.charset=UTF-8
 publish.hasSource=false
