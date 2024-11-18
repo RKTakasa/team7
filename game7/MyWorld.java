@@ -19,7 +19,7 @@ public class MyWorld extends World
     int back_x = 0;
     int back_width;
     boolean flop = false;
-    
+    int x = 1;
     public MyWorld()
     {    
         super(800, 450, 1); // 画像サイズをセットする
@@ -47,5 +47,25 @@ public class MyWorld extends World
 
         showText( "back_x : "+ back_x, 100, 10 );
         
+<<<<<<< HEAD
+=======
+        //キャラクターランダム配置テンプレ
+        int A = 0;
+        int B = 800;
+        int a = 0;
+        int b = 450;
+        int i = 0;
+       if(x == 1)
+       {
+           for(i=0; i<5; i++)
+             {
+                int C = A + (int)(Math.random()*((B-A)+1));
+                int c = a + (int)(Math.random()*((b-a)+1));
+               addObject( new towaaaaaaaaa(), C, c );
+               
+            }
+            x = 0;
+        }
+>>>>>>> a6731aca1224f7e5f47e6099064f6360c5a107d2
     }
 }

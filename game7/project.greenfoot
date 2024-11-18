@@ -2,12 +2,15 @@
 class.A.image=kintato.png
 class.MyWorld.image=back_flop.jpeg
 class.towaaaaaaaaa.image=tux.png
+dependency1.from=MyWorld
+dependency1.to=A
+dependency1.type=UsesDependency
 editor.fx.0.height=739
-editor.fx.0.width=816
+editor.fx.0.width=1203
 editor.fx.0.x=140
 editor.fx.0.y=134
 height=635
-package.numDependencies=0
+package.numDependencies=1
 package.numTargets=3
 project.charset=UTF-8
 publish.hasSource=false
