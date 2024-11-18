@@ -46,10 +46,6 @@ public class MyWorld extends World
         getBackground().drawImage( flop ? back : back_flop, back_x+back_width, 0 );
 
         showText( "back_x : "+ back_x, 100, 10 );
-        
-<<<<<<< HEAD
-=======
-        //キャラクターランダム配置テンプレ
         int A = 0;
         int B = 800;
         int a = 0;
@@ -66,6 +62,5 @@ public class MyWorld extends World
             }
             x = 0;
         }
->>>>>>> a6731aca1224f7e5f47e6099064f6360c5a107d2
     }
 }
