@@ -45,7 +45,6 @@ public class MyWorld extends World
         getBackground().drawImage( flop ? back_flop : back, back_x, 0 );
         getBackground().drawImage( flop ? back : back_flop, back_x+back_width, 0 );
 
-        showText( "back_x : "+ back_x, 100, 10 );
         int A = 0;
         int B = 800;
         int a = 0;
@@ -57,8 +56,8 @@ public class MyWorld extends World
              {
                 int C = A + (int)(Math.random()*((B-A)+1));
                 int c = a + (int)(Math.random()*((b-a)+1));
+               addObject( new atari(), C, c );
                addObject( new towaaaaaaaaa(), C, c );
-               
             }
             x = 0;
         }
