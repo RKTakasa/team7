@@ -30,7 +30,7 @@ public class A extends Actor
         if( Greenfoot.isKeyDown( "down" ) ){
             setLocation( x,y+5 );
         }
-        Actor actor = getOneIntersectingObject( atari.class );
+        Actor actor = getOneIntersectingObject( towaaaaaaaaa.class );
         if( actor != null ){
             Greenfoot.stop();
         }     
