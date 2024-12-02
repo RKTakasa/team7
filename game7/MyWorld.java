@@ -45,7 +45,7 @@ public class MyWorld extends World
         getBackground().drawImage( flop ? back_flop : back, back_x, 0 );
         getBackground().drawImage( flop ? back : back_flop, back_x+back_width, 0 );
 
-        int A = 0;
+        int A = 300;
         int B = 800;
         int a = 0;
         int b = 450;

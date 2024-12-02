@@ -12,6 +12,7 @@ public class A extends Actor
      * Act - do whatever the A wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
+    public int c=3;
     public void act() 
     {
         getImage().scale( 100, 100 );
@@ -33,6 +34,6 @@ public class A extends Actor
         Actor actor = getOneIntersectingObject( towaaaaaaaaa.class );
         if( actor != null ){
             Greenfoot.stop();
-        }     
+        }   
     }    
 }
