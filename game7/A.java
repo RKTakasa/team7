@@ -16,21 +16,23 @@ public class A extends Actor
     {
         getImage().scale( 100, 100 );
         // Add your action code here.
-        if( Greenfoot.isKeyDown( "right" ) ){
-            setRotation(0);
-            move(5);
-        }
+        int x = getX();
+        int y = getY();
         if( Greenfoot.isKeyDown( "left" ) ){
-            setRotation(180);
-            move(5);
+            setLocation( x-5,y );
+        }
+        if( Greenfoot.isKeyDown( "right" ) ){
+            setLocation( x+5,y );
         }
         if( Greenfoot.isKeyDown( "up" ) ){
-            setRotation(270);
-            move(5);
+            setLocation( x,y-5 );
         }
         if( Greenfoot.isKeyDown( "down" ) ){
-            setRotation(90);
-            move(5);
+            setLocation( x,y+5 );
         }
+        Actor actor = getOneIntersectingObject( atari.class );
+        if( actor != null ){
+            Greenfoot.stop();
+        }     
     }    
 }

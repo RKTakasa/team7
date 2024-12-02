@@ -23,9 +23,14 @@ public class towaaaaaaaaa extends Actor
     }
     public void act() 
     {
-        int C = A + (int)(Math.random()*((B-A)+1));
-        setRotation(C);
-        move(5);
+        int x = getX();
+        int y = getY();
+        if(x<=0){
+            int C = 0 + (int)(Math.random()*((450-0)+1));
+            setLocation( 800, C);
+        }else{
+            setLocation( x-5,y );
+        }
         
     }    
 }

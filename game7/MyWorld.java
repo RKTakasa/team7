@@ -47,10 +47,12 @@ public class MyWorld extends World
         getBackground().drawImage( flop ? haikei_Crop2 : haikei_Crop, back_x, 0 );
         getBackground().drawImage( flop ? haikei_Crop : haikei_Crop2, back_x+back_width, 0 );
 
+
         showText( "back_x : "+ back_x, 100, 10 );
         
 
         //キャラクターランダム配置テンプレ
+
         int A = 0;
         int B = 800;
         int a = 0;
@@ -62,8 +64,8 @@ public class MyWorld extends World
              {
                 int C = A + (int)(Math.random()*((B-A)+1));
                 int c = a + (int)(Math.random()*((b-a)+1));
+               addObject( new atari(), C, c );
                addObject( new towaaaaaaaaa(), C, c );
-               
             }
             x = 0;
         }
