@@ -64,7 +64,6 @@ public class MyWorld extends World
              {
                 int C = A + (int)(Math.random()*((B-A)+1));
                 int c = a + (int)(Math.random()*((b-a)+1));
-               addObject( new atari(), C, c );
                addObject( new towaaaaaaaaa(), C, c );
             }
             x = 0;
