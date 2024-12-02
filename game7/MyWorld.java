@@ -13,8 +13,8 @@ public class MyWorld extends World
      * Constructor for objects of class MyWorld.
      * 
      */
-    GreenfootImage back;
-    GreenfootImage back_flop;
+    GreenfootImage haikei_Crop;
+    GreenfootImage haikei_Crop2;
     int back_dx = -5; // スクロール速度(マイナスにすると左から右)
     int back_x = 0;
     int back_width;
@@ -23,9 +23,11 @@ public class MyWorld extends World
     public MyWorld()
     {    
         super(800, 450, 1); // 画像サイズをセットする
-        back = new GreenfootImage( "./images/back.jpeg" );
-        back_flop = new GreenfootImage( "./images/back_flop.jpeg" );
-        back_width = back.getWidth();
+        haikei_Crop = new GreenfootImage( "./images/haikei_Crop.jpg" );
+        haikei_Crop2 = new GreenfootImage( "./images/haikei_Crop2.jpg" );
+        haikei_Crop.scale(getWidth(), getHeight());
+        haikei_Crop2.scale(getWidth(), getHeight());
+        back_width = haikei_Crop.getWidth();
         
         addObject( new A(), 100, 200 );
     }
@@ -42,8 +44,14 @@ public class MyWorld extends World
             back_x += back_width;
             flop = !flop;
         }
-        getBackground().drawImage( flop ? back_flop : back, back_x, 0 );
-        getBackground().drawImage( flop ? back : back_flop, back_x+back_width, 0 );
+        getBackground().drawImage( flop ? haikei_Crop2 : haikei_Crop, back_x, 0 );
+        getBackground().drawImage( flop ? haikei_Crop : haikei_Crop2, back_x+back_width, 0 );
+
+
+        //showText( "スコア: "+ back_x*(-1), 100, 10 );
+        
+
+        //キャラクターランダム配置テンプレ
 
         int A = 300;
         int B = 800;
@@ -60,5 +68,6 @@ public class MyWorld extends World
             }
             x = 0;
         }
+
     }
 }

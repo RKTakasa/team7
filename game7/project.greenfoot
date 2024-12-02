@@ -11,13 +11,33 @@ dependency2.type=UsesDependency
 dependency3.from=A
 dependency3.to=towaaaaaaaaa
 dependency3.type=UsesDependency
+<<<<<<< HEAD
 editor.fx.0.height=0
 editor.fx.0.width=0
 editor.fx.0.x=0
 editor.fx.0.y=0
+=======
+<<<<<<< HEAD
+dependency4.from=A
+dependency4.to=atari
+dependency4.type=UsesDependency
+editor.fx.0.height=739
+editor.fx.0.width=816
+editor.fx.0.x=552
+editor.fx.0.y=100
+height=672
+package.numDependencies=4
+package.numTargets=4
+=======
+editor.fx.0.height=1056
+editor.fx.0.width=1936
+editor.fx.0.x=-8
+editor.fx.0.y=-8
+>>>>>>> 3bf3a705b164db5358563d6c7104f8badf51de54
 height=1056
 package.numDependencies=3
 package.numTargets=3
+>>>>>>> beb3b231de53c5917e57642ef7fc0273979d8ae5
 project.charset=UTF-8
 publish.hasSource=false
 publish.locked=true
@@ -54,7 +74,7 @@ target3.width=80
 target3.x=0
 target3.y=0
 version=3.0.0
-width=1936
+width=1040
 world.lastInstantiated=MyWorld
-xPosition=0
-yPosition=0
+xPosition=793
+yPosition=345
