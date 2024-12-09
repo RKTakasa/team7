@@ -60,9 +60,6 @@ public class MyWorld extends World
 
 
         //showText( "スコア: "+ back_x*(-1), 100, 10 );
-<<<<<<< HEAD
-        
-=======
         if( Greenfoot.isKeyDown( "space" ) ){
             Greenfoot.playSound("maou_bgm_fantasy07.mp3");
          }
@@ -85,6 +82,5 @@ public class MyWorld extends World
             x = 0;
         }
 
->>>>>>> f8ea58c6ef42aec15f975cf4e4b81d847742077b
     }
 }
