@@ -49,7 +49,9 @@ public class MyWorld extends World
 
 
         //showText( "スコア: "+ back_x*(-1), 100, 10 );
-        
+        if( Greenfoot.isKeyDown( "space" ) ){
+            Greenfoot.playSound("maou_bgm_fantasy07.mp3");
+         }
 
         //キャラクターランダム配置テンプレ
 
