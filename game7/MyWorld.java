@@ -30,6 +30,17 @@ public class MyWorld extends World
         back_width = haikei_Crop.getWidth();
         
         addObject( new A(), 100, 200 );
+        int A = 300;
+        int B = 800;
+        int a = 0;
+        int b = 450;
+        int i = 0;
+        for(i=0; i<5; i++)
+             {
+                int C = A + (int)(Math.random()*((B-A)+1));
+                int c = a + (int)(Math.random()*((b-a)+1));
+               addObject( new towaaaaaaaaa(), C, c );
+            }
     }
     public void act()
     {
@@ -50,24 +61,5 @@ public class MyWorld extends World
 
         //showText( "スコア: "+ back_x*(-1), 100, 10 );
         
-
-        //キャラクターランダム配置テンプレ
-
-        int A = 300;
-        int B = 800;
-        int a = 0;
-        int b = 450;
-        int i = 0;
-       if(x == 1)
-       {
-           for(i=0; i<5; i++)
-             {
-                int C = A + (int)(Math.random()*((B-A)+1));
-                int c = a + (int)(Math.random()*((b-a)+1));
-               addObject( new towaaaaaaaaa(), C, c );
-            }
-            x = 0;
-        }
-
     }
 }

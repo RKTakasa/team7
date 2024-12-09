@@ -1,5 +1,4 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
 /**
  * Write a description of class towaaaaaaaaa here.
  * 
@@ -13,13 +12,17 @@ public class towaaaaaaaaa extends Actor
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     private GreenfootImage img_bkup = null;
-    private int width=50;
-    private int height= 50;
+    private int width=10;
+    private int height= 10;
     private int A = 0;
     private int B = 360;
+    atari enemy = null;
     public towaaaaaaaaa(){
         img_bkup = new GreenfootImage( getImage() );
+        setImage(img_bkup);
         getImage().scale( width,height );
+        getImage().setTransparency(0);
+
     }
     public void act() 
     {
@@ -31,6 +34,15 @@ public class towaaaaaaaaa extends Actor
         }else{
             setLocation( x-5,y );
         }
+     
+        if(enemy == null){
+                enemy = new atari();
+                enemy. getImage().scale( 50,50 );
+                 getWorld().addObject(enemy,0,0);
+        }
+        enemy.setLocation(getX(),getY());
         
-    }    
+    }
+    
+    
 }
