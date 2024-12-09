@@ -13,6 +13,7 @@ public class A extends Actor
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public int c=3;
+    
     public void act() 
     {
         getImage().scale( 100, 100 );
@@ -33,7 +34,18 @@ public class A extends Actor
         }
         Actor actor = getOneIntersectingObject( towaaaaaaaaa.class );
         if( actor != null ){
+            getWorld().showText( "GAME OVER", 400, 200 );
             Greenfoot.stop();
+            
+            //getWorld().removeObject( actor );
+            
+        }   
+        Actor actor2 = getOneIntersectingObject( NAKAMA.class );
+        if( actor2 != null ){
+            //Greenfoot.stop();
+            getWorld().removeObject( actor2 );
+            
+            
         }   
     }    
     public void atari(int x2,int y2){
