@@ -20,6 +20,7 @@ public class MyWorld extends World
     int back_width;
     boolean flop = false;
     int x = 1;
+    int y = 1;
     public MyWorld()
     {    
         super(800, 450, 1); // 画像サイズをセットする
@@ -69,6 +70,16 @@ public class MyWorld extends World
                addObject( new towaaaaaaaaa(), C, c );
             }
             x = 0;
+        }
+        if(y == 1)
+       {
+           for(i=0; i<5; i++)
+             {
+                int C = A + (int)(Math.random()*((B-A)+1));
+                int c = a + (int)(Math.random()*((b-a)+1));
+               addObject( new NAKAMA(), C, c );
+            }
+            y = 0;
         }
 
     }
