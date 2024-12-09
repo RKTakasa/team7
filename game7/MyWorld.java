@@ -31,6 +31,17 @@ public class MyWorld extends World
         back_width = haikei_Crop.getWidth();
         
         addObject( new A(), 100, 200 );
+        int A = 300;
+        int B = 800;
+        int a = 0;
+        int b = 450;
+        int i = 0;
+        for(i=0; i<5; i++)
+             {
+                int C = A + (int)(Math.random()*((B-A)+1));
+                int c = a + (int)(Math.random()*((b-a)+1));
+               addObject( new towaaaaaaaaa(), C, c );
+            }
     }
     public void act()
     {
@@ -50,6 +61,9 @@ public class MyWorld extends World
 
 
         //showText( "スコア: "+ back_x*(-1), 100, 10 );
+<<<<<<< HEAD
+        
+=======
         if( Greenfoot.isKeyDown( "space" ) ){
             Greenfoot.playSound("maou_bgm_fantasy07.mp3");
          }
@@ -82,5 +96,6 @@ public class MyWorld extends World
             y = 0;
         }
 
+>>>>>>> f8ea58c6ef42aec15f975cf4e4b81d847742077b
     }
 }

@@ -1,8 +1,13 @@
 #Greenfoot project file
 class.A.image=kintato.png
 class.MyWorld.image=haikei_Crop.jpg
+<<<<<<< HEAD
 class.NAKAMA.image=\u9003\u3052\u308B\u866B\u3070\u3044\u83CC\u3055\u3093-1024x1024.png
 class.towaaaaaaaaa.image=\u6226\u3046\u767D\u8840\u7403\u3055\u3093-1024x1024.png
+=======
+class.atari.image=enemy.png
+class.towaaaaaaaaa.image=bricks2.jpg
+>>>>>>> 6ee712cbcf5a6fdafce847ec6138f12916e5d61b
 dependency1.from=MyWorld
 dependency1.to=A
 dependency1.type=UsesDependency
@@ -12,19 +17,39 @@ dependency2.type=UsesDependency
 dependency3.from=MyWorld
 dependency3.to=NAKAMA
 dependency3.type=UsesDependency
+<<<<<<< HEAD
 dependency4.from=A
 dependency4.to=towaaaaaaaaa
 dependency4.type=UsesDependency
 dependency5.from=A
 dependency5.to=NAKAMA
 dependency5.type=UsesDependency
+=======
+<<<<<<< HEAD
+dependency4.from=towaaaaaaaaa
+dependency4.to=atari
+dependency4.type=UsesDependency
+editor.fx.0.height=1056
+editor.fx.0.width=1936
+editor.fx.0.x=-8
+editor.fx.0.y=-8
+height=1056
+package.numDependencies=4
+=======
+>>>>>>> 6ee712cbcf5a6fdafce847ec6138f12916e5d61b
 editor.fx.0.height=739
 editor.fx.0.width=816
 editor.fx.0.x=147
 editor.fx.0.y=143
 height=654
+<<<<<<< HEAD
 package.numDependencies=5
 package.numTargets=5
+=======
+package.numDependencies=3
+>>>>>>> f8ea58c6ef42aec15f975cf4e4b81d847742077b
+package.numTargets=4
+>>>>>>> 6ee712cbcf5a6fdafce847ec6138f12916e5d61b
 project.charset=UTF-8
 publish.hasSource=false
 publish.locked=true

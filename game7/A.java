@@ -48,4 +48,11 @@ public class A extends Actor
             
         }   
     }    
+    public void atari(int x2,int y2){
+        int x = getX();
+        int y = getY();
+        if(x==x2 && y==y2){
+            Greenfoot.stop();
+        }
+    }
 }
