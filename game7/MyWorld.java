@@ -68,8 +68,12 @@ public class MyWorld extends World
 
 
         //showText( "スコア: "+ back_x*(-1), 100, 10 );
+<<<<<<< HEAD
 
         /*if( Greenfoot.isKeyDown( "space" ) ){
+=======
+        if( Greenfoot.isKeyDown( "space" ) ){
+>>>>>>> 182ce12b43e2ab3aab92d5fb7beed27d0cda34d1
             Greenfoot.playSound("maou_bgm_fantasy07.mp3");
          }*/
          Greenfoot.playSound("maou_bgm_fantasy07.mp3");
