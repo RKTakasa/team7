@@ -13,13 +13,14 @@ public class A extends Actor
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public int c=3;
-    
+    public int a = 5;
     public void act() 
     {
         getImage().scale( 100, 100 );
         // Add your action code here.
         int x = getX();
         int y = getY();
+        
         if( Greenfoot.isKeyDown( "left" ) ){
             setLocation( x-5,y );
         }
@@ -44,15 +45,14 @@ public class A extends Actor
         if( actor2 != null ){
             //Greenfoot.stop();
             getWorld().removeObject( actor2 );
-            
-            
-        }   
-    }    
-    public void atari(int x2,int y2){
-        int x = getX();
-        int y = getY();
-        if(x==x2 && y==y2){
-            Greenfoot.stop();
+            a = a-1;
+             if(a <= 0)
+             {
+                getWorld().showText( "GAME CLEAR", 500, 200 );
+                Greenfoot.stop();
+             }
         }
-    }
+        
+    }    
 }
+
