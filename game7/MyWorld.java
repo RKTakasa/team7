@@ -68,7 +68,6 @@ public class MyWorld extends World
 
 
         //showText( "スコア: "+ back_x*(-1), 100, 10 );
-<<<<<<< HEAD
 
         /*if( Greenfoot.isKeyDown( "space" ) ){
 =======
