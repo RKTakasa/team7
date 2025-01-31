@@ -14,13 +14,36 @@ public class A extends Actor
      */
     public int c=3;
     public int a = 5;
+    private GreenfootImage img_bkup = null;
+    private int sx=100;
+    private int sy=100;
+    int count=15;
+    public A(){
+        img_bkup = new GreenfootImage( getImage() );
+        getImage().scale( 100,100 );
+    }
     public void act() 
     {
-        getImage().scale( 100, 100 );
+        
+        getImage().scale( sx, sy );
+        if(count==10){
+            
+            ((MyWorld)getWorld()).showTextEx("3", 390, 240, 256, false, Color.WHITE );
+            Greenfoot.delay(80);
+            ((MyWorld)getWorld()).showTextEx("2", 390, 240, 256, false, Color.WHITE );
+            Greenfoot.delay(80);
+            ((MyWorld)getWorld()).showTextEx("1", 390, 240, 256, false, Color.WHITE );
+            Greenfoot.delay(80);
+            ((MyWorld)getWorld()).showTextEx("START", 390, 240, 256, false, Color.WHITE );
+
+        }else if(count==1){
+            ((MyWorld)getWorld()).showTextEx("", 390, 240, 256, false, Color.WHITE );
+
+        }
+        count=count-1;
         // Add your action code here.
         int x = getX();
         int y = getY();
-        
         if( Greenfoot.isKeyDown( "left" ) ){
             setLocation( x-5,y );
         }
@@ -44,6 +67,11 @@ public class A extends Actor
         Actor actor2 = getOneIntersectingObject( NAKAMA.class );
         if( actor2 != null ){
             //Greenfoot.stop();
+            sx=sx+10;
+            sy=sy+10;
+            GreenfootImage img = new GreenfootImage(img_bkup);
+            img.scale( sx,sy );
+            setImage(img);
             getWorld().removeObject( actor2 );
             a = a-1;
              if(a <= 0)

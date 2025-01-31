@@ -1,5 +1,9 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
+import greenfoot.*;
+import greenfoot.core.TextLabel;
+import greenfoot.WorldVisitor;
+import greenfoot.util.GraphicsUtilities;
+import java.util.ArrayList;
+import java.awt.Graphics2D;
 /**
  * Write a description of class MyWorld here.
  * 
@@ -8,7 +12,83 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class MyWorld extends World
 {
+    class TextLabelEx extends TextLabel
+    {
+        boolean enable;
+        int xpos;
+        int ypos;
+        int size;
+        boolean bold;
+        greenfoot.Color gfcolor;
+        java.awt.Color color;
+        String text;
+        String[] lines;
+        private GraphicsUtilities.MultiLineStringDimensions dimensions = null;
+        
+        @Override
+        public int getX(){ return xpos;}
+        
+        @Override
+        public int getY(){ return ypos;}
+        
+        @Override
+        public String getText(){ return text;}     
+        
+        public TextLabelEx(String _text, int _xpos, int _ypos, int _size, boolean _bold, greenfoot.Color _gfcolor )
+        {
+            super("", 0, 0 );
+            lines = new String[1];
+            xpos = _xpos;
+            ypos = _ypos;
+            reset( _text, _size, _bold, _gfcolor );
+        }
+        
+        public void reset( String _text, int _size, boolean _bold, greenfoot.Color _gfcolor )
+        {
+            if( text == _text && size == _size && bold == _bold && gfcolor == _gfcolor ) return;
+            text = _text;
+            size = _size;
+            bold = _bold;
+            gfcolor = _gfcolor;
+            lines[0] = text;
+            dimensions = null;
+            
+            if( text.length() == 0 ) enable = false;
+            else enable = true;
+        }
 
+        @Override
+        public void draw(Graphics2D g, int cellsize)
+        {
+            if( !enable ) return;
+            if(dimensions == null) {
+                dimensions = GraphicsUtilities.getMultiLineStringDimensions(lines, bold ? java.awt.Font.BOLD : java.awt.Font.PLAIN, size);
+                color = new java.awt.Color( gfcolor.getRed(), gfcolor.getGreen(), gfcolor.getBlue(), gfcolor.getAlpha() );
+            }
+                
+            int ydraw = ypos * cellsize - dimensions.getHeight() / 2 + cellsize / 2;
+            int xdraw = xpos * cellsize - dimensions.getWidth() / 2 + cellsize / 2;
+            g.translate(xdraw, ydraw);
+            GraphicsUtilities.drawOutlinedText(g, dimensions, color, java.awt.Color.BLACK);
+            g.translate(-xdraw, -ydraw);
+        }
+    }   
+    
+    public void showTextEx(String text, int x, int y, int size, boolean bold, greenfoot.Color color )
+    {
+        for( TextLabel label : WorldVisitor.getTextLabels(this) ){
+            if( label.getX() == x && label.getY() == y ){
+                if( label instanceof TextLabelEx ){
+                    ((TextLabelEx)label).reset(text, size, bold, color);
+                    return;                    
+                }
+            }
+        }
+        WorldVisitor.getTextLabels(this).add(new TextLabelEx( text, x, y, size, bold, color ) );
+        
+        //showText( "labels: "+WorldVisitor.getTextLabels(this).size(), 80, 20 );
+    }
+    
     /**
      * Constructor for objects of class MyWorld.
      * 
@@ -31,7 +111,6 @@ public class MyWorld extends World
         back_width = haikei_Crop.getWidth();
         showText( "←↑→↓キーで移動", 120, 20 );
         showText( "仲間を５体集めてクリア", 120, 50 );
-        addObject( new A(), 100, 200 );
         int A = 300;
         int B = 800;
         int a = 0;
@@ -49,11 +128,11 @@ public class MyWorld extends World
                 int c = a + (int)(Math.random()*((b-a)+1));
                addObject( new NAKAMA(), C, c );
             }
+        addObject( new A(), 100, 200 );
     }
     public void act()
     {
         //
-        
         back_x += back_dx;
         if( back_x > 0){
             back_x -= back_width;
@@ -65,10 +144,9 @@ public class MyWorld extends World
         }
         getBackground().drawImage( flop ? haikei_Crop2 : haikei_Crop, back_x, 0 );
         getBackground().drawImage( flop ? haikei_Crop : haikei_Crop2, back_x+back_width, 0 );
-
+        
 
         //showText( "スコア: "+ back_x*(-1), 100, 10 );
-<<<<<<< HEAD
 
         /*if( Greenfoot.isKeyDown( "space" ) ){
 =======
@@ -76,7 +154,7 @@ public class MyWorld extends World
 >>>>>>> 182ce12b43e2ab3aab92d5fb7beed27d0cda34d1
             Greenfoot.playSound("maou_bgm_fantasy07.mp3");
          }*/
-         Greenfoot.playSound("maou_bgm_fantasy07.mp3");
+         //Greenfoot.playSound("maou_bgm_fantasy07.mp3");
 
         //キャラクターランダム配置テンプレ
 
